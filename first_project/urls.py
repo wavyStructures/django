@@ -26,4 +26,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('tech_gadgets/', include('tech_gadgets.urls')),
     path('', redirect_to_tech_gadgets)
-]
+   ]
