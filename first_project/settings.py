@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#hfyg+jga=g-p9=e427*9ea!e8(i+8dheouca3ql+l1gd_zo*n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -74,7 +74,8 @@ ROOT_URLCONF = 'first_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'first_project/templates'],
+        'DIRS': [BASE_DIR / 'tech_gadgets/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,5 +140,10 @@ STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
+
+# Add the directory where your static files are located
+STATICFILES_DIRS = [
+    BASE_DIR / 'tech_gadgets' / 'static',  # Adjust this path based on where your static files are stored
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

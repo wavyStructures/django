@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'tech_gadgets/style.css' %}">
+
+    <title>Test</title>
+</head>
+<body>
+    das ist der HTML render TEST
+
+    {% for gadget in gadget_list %}
+    <h2>{{ gadget.name }}</h2>
+
+    {% endfor %}
+
+</body>
+</html>
