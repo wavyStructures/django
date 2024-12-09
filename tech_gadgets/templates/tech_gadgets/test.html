@@ -1,21 +1,12 @@
-{% load static %}
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'tech_gadgets/style.css' %}">
+{% block title %}My amazing blog{% endblock %}
 
-    <title>Test</title>
-</head>
-<body>
-    das ist der HTML render TEST
-
+{% block content %}
     {% for gadget in gadget_list %}
     <h2>{{ gadget.name }}</h2>
 
     {% endfor %}
-
+{% endblock %}
 </body>
 </html>
